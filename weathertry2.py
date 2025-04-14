@@ -17,7 +17,7 @@ def get_weather(city):
         wind_speed = data["wind"]["speed"]
         weather_description = data["weather"][0]["description"]
 
-        # Hora local del lugar (necesita timestamp + zona horaria en segundos)
+        # Local time of the place (needs timestamp + time zone in seconds)
         timestamp = data["dt"]
         timezone_offset = data["timezone"]
         local_time = datetime.utcfromtimestamp(timestamp + timezone_offset).strftime('%Y-%m-%d %H:%M:%S')
